@@ -1,0 +1,22 @@
+#
+
+datos = []
+ala = input("desea ingresar a (y/n): ")
+for i in range(2):
+    if ala.lower() == "y":
+        paciente = []
+        nombre = input('ingrese el nombre del paciente: ') 
+        paciente.append(nombre)
+        identificacion = int(input('ingrese el numero de identificacion del paciente: '))
+        paciente.append(identificacion)
+        edad = int(input('ingrese la edad del paciente: '))
+        paciente.append(edad)
+        EPS = input('ingrese  la eps del paciente: ')
+        paciente.append(EPS)
+        datos.append(paciente)
+    elif ala.lower() == "n":
+        break
+for k in range(len(datos)):
+    print('\n',"Nombre: ",'\t''\t',datos[k][0], '\n',"Identificacion: ",'\t',datos[k][1],'\n', "Edad: ",'\t''\t', datos[k][2],'\n', "EPS: ",'\t''\t''\t',datos[k][3])
+
+
